@@ -24,6 +24,12 @@ export default function Header() {
         >
           Gallery
         </NavLink>
+        <NavLink
+          to="/accomodation"
+          className={({ isActive }) => `${styles.link} ${isActive ? styles.active : ''}`}
+        >
+          Accommodation
+        </NavLink>
         <a
           href="https://wa.me/254700000000"
           target="_blank"
