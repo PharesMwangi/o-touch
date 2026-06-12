@@ -27,7 +27,8 @@ export default function Restruant() {
         <p className={styles.eyebrow}>Eat With Us</p>
         <h1 className={styles.title}>Our Meals Be The Best 👌</h1>
         <p className={styles.sub}>
-          Join our tables and let your hunger be our business now 😎
+            Our meals are served with hearts full of Love. <br />
+          Com'n Join our tables and let your hunger be our business now 😎
         </p>
       </div>
 
