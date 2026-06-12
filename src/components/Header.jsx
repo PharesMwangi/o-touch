@@ -30,6 +30,12 @@ export default function Header() {
         >
           Accomodation
         </NavLink>
+        <NavLink
+          to="/restruant"
+          className={({ isActive}) =>`${styles.link} ${isActive ? styles.active : ''}`}
+          >
+            Restruant
+          </NavLink>
         <a
           href="https://wa.me/254700000000"
           target="_blank"

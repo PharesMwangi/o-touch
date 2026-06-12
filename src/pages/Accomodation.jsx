@@ -23,7 +23,7 @@ export default function Accommodation(){
                 {photos.map((photo, i) =>(
                     <div
                     key={i}
-                    //className={`${styles.item} ${photo.span === ''}`}
+                    className={`${styles.item} ${photo.span === ''}`}/*this code*/
                     style ={{ animationDelay: `${i * 0.12}s` }}>
                         <img src={photo.src} alt={photo.label} className={styles.img} />
                         <div className={styles.overlay}>
