@@ -7,15 +7,17 @@
   justify-content: space-between;
   padding: 0 48px;
   height: 72px;
-  background: rgba(12, 8, 4, 0.96);
+  background: rgba(12, 8, 4, 0.97);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(200, 152, 58, 0.2);
 }
 
+/* ── LOGO ── */
 .logoWrap {
   display: flex;
   align-items: center;
   gap: 10px;
+  z-index: 101;
 }
 
 .logoImg {
@@ -34,6 +36,7 @@
   letter-spacing: 0.5px;
 }
 
+/* ── DESKTOP NAV ── */
 .nav {
   display: flex;
   align-items: center;
@@ -48,7 +51,6 @@
   color: rgba(253, 248, 240, 0.55);
   transition: color 0.2s;
 }
-
 .link:hover { color: #E4B96A; }
 .active     { color: #E4B96A !important; }
 
@@ -62,11 +64,99 @@
   padding: 9px 20px;
   border-radius: 4px;
   transition: background 0.2s;
+  white-space: nowrap;
 }
 .cta:hover { background: #E4B96A; }
 
-@media (max-width: 640px) {
-  .header { padding: 0 20px; }
-  .nav    { gap: 20px; }
-  .cta    { display: none; }
+/* ── HAMBURGER BUTTON ── */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  z-index: 101;
+}
+
+.bar {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: #E4B96A;
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  transform-origin: center;
+}
+
+/* Animate bars into X when open */
+.bar1Open { transform: translateY(7px) rotate(45deg); }
+.bar2Open { opacity: 0; transform: scaleX(0); }
+.bar3Open { transform: translateY(-7px) rotate(-45deg); }
+
+/* ── MOBILE DROPDOWN ── */
+.mobileMenu {
+  display: none;
+  position: absolute;
+  top: 72px;
+  left: 0;
+  right: 0;
+  background: rgba(12, 8, 4, 0.98);
+  border-bottom: 1px solid rgba(200, 152, 58, 0.2);
+  flex-direction: column;
+  padding: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease, padding 0.35s ease;
+}
+
+.mobileMenuOpen {
+  max-height: 400px;
+  padding: 16px 0 24px;
+}
+
+.mobileLink {
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: rgba(253, 248, 240, 0.55);
+  padding: 14px 32px;
+  transition: color 0.2s, background 0.2s;
+  border-left: 2px solid transparent;
+}
+.mobileLink:hover {
+  color: #E4B96A;
+  background: rgba(200, 152, 58, 0.05);
+  border-left-color: #E4B96A;
+}
+.mobileLink.active {
+  color: #E4B96A !important;
+  border-left-color: #E4B96A;
+}
+
+.mobileCta {
+  display: inline-block;
+  margin: 16px 32px 0;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #0C0804;
+  background: #C8983A;
+  padding: 11px 24px;
+  border-radius: 4px;
+  text-align: center;
+  transition: background 0.2s;
+}
+.mobileCta:hover { background: #E4B96A; }
+
+/* ── RESPONSIVE BREAKPOINTS ── */
+@media (max-width: 860px) {
+  .header  { padding: 0 24px; }
+  .nav     { display: none; }
+  .hamburger { display: flex; }
+  .mobileMenu { display: flex; }
 }

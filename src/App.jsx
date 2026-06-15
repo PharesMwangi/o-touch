@@ -4,6 +4,7 @@ import Home from './pages/Home'
 import Gallery from './pages/Gallery'
 import Accommodation from './pages/Accomodation'
 import Restruant from './pages/Restruant'
+import Reviews from './pages/Reviews'
 import './index.css'
 
 export default function App() {
@@ -15,6 +16,7 @@ export default function App() {
         <Route path="/gallery" element={<Gallery />} />
         <Route path='/accomodation' element={<Accommodation />} />
         <Route path='/restruant' element={<Restruant />} />
+        <Route path='/reviews' element={<Reviews />} />
       </Routes>
     </BrowserRouter>
   )
