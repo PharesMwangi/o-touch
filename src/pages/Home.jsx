@@ -137,6 +137,17 @@ export default function Home() {
         </div>
       </section>
 
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.532624041105!2d37.356284174964784!3d-0.6856712993076436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1826210c3a972bff%3A0x81e868489691060e!2sCLUB%20O&#39;TOUCH-MWEA!5e0!3m2!1sen!2ske!4v1781513482055!5m2!1sen!2ske"
+        width="100%"
+        height="450"
+        style={{ border: 0 }}
+        allowFullScreen
+        loading="lazy"
+        referrerPolicy="no-referrer-when-downgrade"
+        title="Club O'Touch Location"
+      />
+
       {/* ── FOOTER STRIP ── */}
       <footer className={styles.footer}>
         <p className={styles.footerLogo}>O'Touch</p>
